@@ -1,0 +1,6 @@
+app:
+  description: Simple app for reducing page numbers
+  version: 0.0.1-SNAPSHOT
+  server:
+    url: ${app.url:http://localhost:8080}
+    stage: local
