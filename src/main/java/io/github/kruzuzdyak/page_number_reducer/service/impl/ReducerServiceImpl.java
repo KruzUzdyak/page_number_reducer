@@ -26,7 +26,7 @@ public class ReducerServiceImpl implements ReducerService {
         StringJoiner joiner = new StringJoiner(",");
         for (int currPos = 0; currPos < pages.length; currPos++) {
             int counter = currPos + 1;
-            counter = checkIsInterval(pages, counter);
+            counter = countIntervalLength(pages, counter);
             currPos = mergeInterval(pages, joiner, currPos, counter);
         }
         return joiner.toString();
@@ -42,7 +42,7 @@ public class ReducerServiceImpl implements ReducerService {
         return currPos;
     }
 
-    private int checkIsInterval(int[] pages, int counter) {
+    private int countIntervalLength(int[] pages, int counter) {
         while (counter < pages.length) {
             if (pages[counter] - 1 == pages[counter - 1]) {
                 counter++;

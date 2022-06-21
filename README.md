@@ -2,8 +2,8 @@
 
 ## Summary
 
-Application can transform number sequences like ```4,3,2,1,7,8``` into ```1-4,7,8```. 
-Numbers in sequence can go unsorted, duplicated, with spaces and must be separated by comma.
+Application can transform unordered page number sequences like ```4,3,2,1,7,8``` into ordered intervals ```1-4,7,8```. 
+Numbers in sequence can go unordered, duplicated, with spaces and must be separated by comma.
 Numbers can't be zero, negative or starts from zero.
 
 ## Preparation Steps
@@ -17,8 +17,10 @@ Numbers can't be zero, negative or starts from zero.
   - app.description - for OpenAPI description
   - app.version - for OpenAPI version of current API
   - app.server.url - for OpenAPI url of application
-  - app.url - environment variable, overrides previous one
   - app.server.stage - define stage of the app server
+
++ Environment variables on startup:
+  - APP_URL - ```overrides app.server.url``` from application.yaml
 
 ## Build
 
@@ -26,5 +28,6 @@ Numbers can't be zero, negative or starts from zero.
 
 ## Deployment
 
-+ run ```java -jar page-number-reducer-***.jar``` in CLI
-+ check [http://localhost:8080/swagger-ui/index.html] for OpenAPI-UI
++ run ```bash start.sh ${APP_URL}``` in CLI
++ check [http://localhost:9000/swagger-ui/index.html] for OpenAPI-UI
++ stop app by ```bash stop.sh``` in CLI
