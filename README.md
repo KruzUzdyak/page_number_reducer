@@ -20,7 +20,7 @@ Numbers can't be zero, negative or starts from zero.
   - app.server.stage - define stage of the app server
 
 + Environment variables on startup:
-  - APP_URL - ```overrides app.server.url``` from application.yaml
+  - APP_URL - overrides ```app.server.url``` from application.yaml
 
 ## Build
 
