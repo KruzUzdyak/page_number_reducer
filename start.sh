@@ -1,12 +1,11 @@
 #!/bin/bash
 
+docker-compose stop
+
 git pull
 
-mvn clean
-mvn package
-
-docker-compose stop
+docker build --tag=page-number-reducer .
 
 export APP_URL=$1
 
-docker-compose up --build -d
+docker-compose up -d

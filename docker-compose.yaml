@@ -2,8 +2,8 @@ version: '3.1'
 
 services:
   page_number_reducer:
-    build:
-      context: .
+    image:
+      page-number-reducer:latest
     ports:
       - 9000:8080
     environment:

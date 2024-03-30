@@ -8,8 +8,7 @@ Numbers can't be zero, negative or starts from zero.
 
 ## Preparation Steps
 
-+ Download and install JDK11+
-+ Download and install Maven
++ Your only need docker installed
 
 ## Configuration
 
@@ -25,9 +24,11 @@ Numbers can't be zero, negative or starts from zero.
 ## Build
 
 + Run ```mvn clean install``` in CLI
+#### OR
++ Just wait for docker build after executing `start.sh`
 
 ## Deployment
 
 + run ```bash start.sh ${APP_URL}``` in CLI
-+ check [http://localhost:9000/swagger-ui/index.html] for OpenAPI-UI
++ check [link](http://localhost:9000/swagger-ui/index.html) for OpenAPI-UI
 + stop app by ```bash stop.sh``` in CLI
